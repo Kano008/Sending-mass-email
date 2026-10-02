@@ -3,8 +3,6 @@ import sqlite3
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-# Gönderici bilgilerini ayarla
-
 smtp_sunucusu = 'smtp.example.com'  # Şirket e-posta sunucu adresi/ Your e-mail server adress
 smtp_port = 587  # Genellikle TLS için 587, SSL için 465/ Your server port
 gonderici_email = 'info@example.com'  # Kendi şirket e-posta adresiniz / Your e-mail adress
