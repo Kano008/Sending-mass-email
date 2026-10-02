@@ -1,16 +1,15 @@
 import sqlite3
 
-# Veritabanı bağlantısını oluştur
-conn = sqlite3.connect('database.db')  # 'database.db' veritabanınızın adı
+# Veritabanı bağlantısını oluştur / Create database link 
+conn = sqlite3.connect('database.db')  # 'Database.db' veritabanınızın adı / Database.db your database name
 cursor = conn.cursor()
 
-# Veritabanındaki 'users' tablosunda veri olup olmadığını kontrol et
+# Veritabanındaki 'users' tablosunda veri olup olmadığını kontrol et / Check users table
 cursor.execute("SELECT * FROM users")
 
-# Verileri al ve ekrana yazdır
+# Verileri al ve ekrana yazdır / Print datas
 rows = cursor.fetchall()
 
-# Eğer veritabanında veri varsa, her bir satırı yazdır
 if rows:
     print("Veritabanındaki kullanıcılar:")
     for row in rows:
@@ -18,5 +17,5 @@ if rows:
 else:
     print("Veritabanında kullanıcı verisi bulunamadı.")
 
-# Bağlantıyı kapat
+# Bağlantıyı kapat / Close database
 conn.close()
